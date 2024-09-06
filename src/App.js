@@ -6,6 +6,7 @@ import MainPage from './pages/MainPage'
 import UniPage from './pages/UniPage'
 import { RouterProvider, Outlet, createBrowserRouter } from 'react-router-dom'
 import AnalysisPage from './pages/AnalysisPage'
+import Settings from './pages/Settings'
 
 
 
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path:'/university',
         element:<UniPage/>
+      },
+      {
+        path:'/settings',
+        element:<Settings/>
       }
     ]
   }

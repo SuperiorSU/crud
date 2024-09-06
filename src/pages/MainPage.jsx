@@ -10,9 +10,9 @@ const MainPage = () => {
   const [universities, setUniversities] = useState([]);
   const [filteredUniversities, setFilteredUniversities] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchType, setSearchType] = useState(''); // 'batch', 'uni', or 'email'
+  const [searchType, setSearchType] = useState('');
 
-  // Fetch students and universities data once on component mount
+  
   useEffect(() => {
     const fetchStudents = async () => {
       try {
@@ -51,7 +51,7 @@ const MainPage = () => {
       } else if (searchType === 'email') {
         return student.email && student.email.toLowerCase().includes(searchQuery.toLowerCase());
       } else {
-        return true; // No filter applied, return all students
+        return true;
       }
     });
 
